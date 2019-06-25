@@ -4,6 +4,10 @@ import java.io.IOException;
 
 public class Medidor {
 
+	private static final String PALABRA_CORTA = ">>>>>>> palabra corta";
+	private static final String PALABRA_MEEEDIA = ">>>>> palabra meeedia";
+	private static final String PALABRA_LAAAARGA = ">>> palabra laaaarga";
+
 	public static void main(String[] args) throws IOException {
 		int contador = 0;
 		String palabra = "";
@@ -20,13 +24,13 @@ public class Medidor {
 		String r = "";
 		switch (diagnostico(a)) {
 		case 1:
-			r = ">>> palabra laaaarga";
+			r = PALABRA_LAAAARGA;
 			break;
 		case 2:
-			r = ">>>>> palabra meeedia";
+			r = PALABRA_MEEEDIA;
 			break;
 		default:
-			r = ">>>>>>> palabra corta";
+			r = PALABRA_CORTA;
 		}
 		return r;
 
