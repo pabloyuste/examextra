@@ -5,13 +5,13 @@ import java.io.IOException;
 public class Medidor {
 
 	public static void main(String[] args) throws IOException {
-		int c = 0;
+		int contador = 0;
 		String palabra = "";
-		while (c < args.length) {
-			palabra = args[c];
+		while (contador < args.length) {
+			palabra = args[contador];
 			System.out.print("'"+palabra + "' es una ");
 			System.out.println(analiza(palabra));
-			c++;
+			contador++;
 		}
 
 	}
