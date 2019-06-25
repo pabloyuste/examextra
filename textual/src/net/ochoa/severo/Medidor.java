@@ -7,6 +7,7 @@ public class Medidor {
 	private static final String PALABRA_CORTA = ">>>>>>> palabra corta";
 	private static final String PALABRA_MEEEDIA = ">>>>> palabra meeedia";
 	private static final String PALABRA_LAAAARGA = ">>> palabra laaaarga";
+	private static final String PALABRA_EXTRALARGAAA = ">>> palabra exxxxtralarga";
 
 	public static void main(String[] args) throws IOException {
 		int contador = 0;
@@ -24,9 +25,12 @@ public class Medidor {
 		String r = "";
 		switch (diagnostico(a)) {
 		case 1:
-			r = PALABRA_LAAAARGA;
+			r = PALABRA_EXTRALARGAAA;
 			break;
 		case 2:
+			r = PALABRA_LAAAARGA;
+			break;
+		case 3:
 			r = PALABRA_MEEEDIA;
 			break;
 		default:
@@ -37,12 +41,17 @@ public class Medidor {
 	}
 
 	private static int diagnostico(String a) {
-		if (a.length() > 8) {
+		if (a.length() > 10) {
 			return 1;
-		} else if (a.length() < 4) {
+		} 
+		else if (a.length() > 8) {
 			return 2;
 		}
-		return 3;
+		else if (a.length() > 4) {
+			return 3;
+		}
+		else if (a.length() <= 4);
+			return 4;
 	}
-
+		
 }
